@@ -1,27 +1,26 @@
 <template>
   <div id="app">
     <v-app>
-      <!-- マテリアルUIはv-appタグで全体を囲むこと!!囲まないと色がおかしくなったりします。 -->
       <AppBar></AppBar>
+      <v-content>
+        <router-view></router-view>
+      </v-content>
       <!-- AppBarコンポーネントをサイトより拾ってくる。 -->
-      <InputTask v-on:child-event="TaskAdded" />
-      <taskView v-bind:tasks="tasks" v-on:child-event="TaskFinished" />
+      <Footer></Footer>
     </v-app>
   </div>
 </template>
 
 <script>
-import TaskView from "./components/TaskView";
-import InputTask from "./components/InputTask";
 import AppBar from "./components/AppBar"; // AppBarコンポーネントをサイトより拾ってくる。
+import Footer from "./components/Footer";
 
 export default {
   name: "App",
   components: {
-    TaskView,
-    InputTask,
-    AppBar // コンポーネントを追加
-  }
+    AppBar, // コンポーネントを追加
+    Footer
+  },
 };
 </script>
 
