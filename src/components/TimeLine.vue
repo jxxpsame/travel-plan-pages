@@ -1,13 +1,23 @@
 <template>
   <v-timeline>
-    <v-timeline-item v-for="n in 3" :key="n" color="red lighten-2" large>
+    <v-timeline-item v-for="(item,index) in tripdata" :key="index" color="red lighten-2" large>
       <template v-slot:opposite>
-        <span>蔵王キツネ村</span>
+        <span>{{item.time}}</span>
       </template>
       <v-card class="elevation-2">
-        <v-card-title class="headline">Lorem ipsum</v-card-title>
-        <v-card-text>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</v-card-text>
+        <v-card-title class="headline">{{item.place}}</v-card-title>
+        <v-img v-bind:src="item.image_src"></v-img>
+        <v-card-text>{{item.express}}</v-card-text>
       </v-card>
     </v-timeline-item>
   </v-timeline>
 </template>
+
+<script>
+export default {
+  props: [
+    "tripdata"
+  ]
+    
+};
+</script>
