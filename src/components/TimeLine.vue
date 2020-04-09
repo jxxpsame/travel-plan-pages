@@ -1,6 +1,6 @@
 <template>
   <v-timeline>
-    <v-timeline-item v-for="(item,index) in tripdata" :key="index" color="red lighten-2" large>
+    <v-timeline-item v-for="(item,index) in tripData" :key="index" color="red lighten-2" large>
       <template v-slot:opposite>
         <span>{{item.time}}</span>
       </template>
@@ -16,7 +16,7 @@
 <script>
 export default {
   props: [
-    "tripdata"
+    "tripData"
   ]
     
 };

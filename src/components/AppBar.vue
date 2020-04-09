@@ -15,7 +15,7 @@
         </v-btn>
 
         <template v-slot:extension>
-          <v-tabs v-model="currentItem" fixed-tabs slider-color="white">
+          <v-tabs fixed-tabs slider-color="white">
             <v-tab to="/">HOME</v-tab>
             <v-tab to="/tab1">Tab1</v-tab>
             <v-tab >Tab2</v-tab>

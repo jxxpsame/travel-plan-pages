@@ -6,6 +6,7 @@ import vuetify from './plugins/vuetify';
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@mdi/font/css/materialdesignicons.css'
+import './assets/sass/style.scss'
 
  //routerのページ読み込み
 import Home from '@/components/Home'
