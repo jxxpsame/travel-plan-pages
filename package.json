@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@mdi/font": "^5.0.45",
-    "ajv": "^6.12.0",
+    "ajv": "^6.12.3",
     "core-js": "^3.6.4",
     "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.6.11",
